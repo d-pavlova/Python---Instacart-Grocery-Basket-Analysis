@@ -1,4 +1,4 @@
-# Python---Instacart-Grocery-Basket-Analysis
+# Python-Instacart-Grocery-Basket-Analysis
 Instacart (online grocery store) sales patterns
 
 # Project objective

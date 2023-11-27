@@ -1,0 +1,11 @@
+Deriving Columns with loc()
+
+ords_prods_merge.loc[ords_prods_merge['max_order'] > 40, 'loyalty_flag'] = 'Loyal customer'
+ords_prods_merge.loc[(ords_prods_merge['max_order'] <= 40) & (ords_prods_merge['max_order'] > 10), 'loyalty_flag'] = 'Regular customer'
+ords_prods_merge.loc[ords_prods_merge['max_order'] <= 10, 'loyalty_flag'] = 'New customer'
+
+# frequency check
+ords_prods_merge['loyalty_flag'].value_counts(dropna = False)
+
+# check (only columns needed)
+ords_prods_merge[['user_id', 'loyalty_flag', 'order_number']].head(60)
